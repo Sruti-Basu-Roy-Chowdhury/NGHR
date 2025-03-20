@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import ellipseImage from "../assets/images/Ellipse 34.jpg";
 import vectorImage from "../assets/images/Vector 60.jpg";
+import "@fontsource/poppins";
+import "@fontsource/inter";
+
 
 const Step8 = () => {
     const navigate = useNavigate();

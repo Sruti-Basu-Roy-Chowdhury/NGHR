@@ -10,6 +10,9 @@ import img5 from "../assets/images/image (2).jpg";
 import img6 from "../assets/images/image (3).jpg";
 import img7 from "../assets/images/img.jpg";
 
+import "@fontsource/poppins";
+import "@fontsource/inter";
+
 const First = () => {
   const [selectedOption, setSelectedOption] = useState(null);
   const navigate = useNavigate();
@@ -29,9 +32,9 @@ const First = () => {
   return (
     <div className="w-screen h-screen flex items-center justify-center bg-gray-100 font-Poppins text-[#05445E]">
       <div className="w-[589px] h-[692px] bg-white shadow-lg rounded-lg flex flex-col items-center relative p-6">
-        <h1 className="text-2xl font-bold mt-4 mb-2">NGHR</h1>
+        <h1 className="text-2xl font-bold mt-4 mb-2 font-[poppins]">NGHR</h1>
 
-        <p className="text-sm text-center mt-10">
+        <p className="text-sm text-center mt-10 font-[poppins] text-black">
           Join over 50,000 satisfied job seekers and <br /> companies who are already on NGHR
         </p>
 
@@ -42,7 +45,7 @@ const First = () => {
         ].map((option) => (
           <div
             key={option.id}
-            className={`w-[392px] h-[88px] mt-6 rounded-md border flex items-center justify-between px-4 cursor-pointer transition-all ${
+            className={`w-[392px] h-[88px] mt-6 text-xs font-[poppins] rounded-md border flex items-center justify-between px-4 cursor-pointer transition-all ${
               selectedOption === option.id ? "border-4 border-[#1f5c76] bg-white" : "border-gray-300"
             }`}
             onClick={() => handleSelect(option.id)}
@@ -70,7 +73,7 @@ const First = () => {
               </div>
               <div className="text-l">
                 <span className="text-sm font-semibold">{option.text}</span>
-                <p className="text-xs mt-1">{option.description}</p>
+                <p className="text-xs mt-2 font-[poppins] text-[#000000]">{option.description}</p>
               </div>
             </div>
 
@@ -85,15 +88,15 @@ const First = () => {
         ))}
 
         <button
-          className="w-[392px] h-[40px] mt-9 rounded-md bg-gradient-to-r from-[#05445E] to-[#00A7AC] text-white font-bold text-lg border-none cursor-pointer transition-all hover:opacity-90"
+          className="w-[392px] h-[40px] mt-9 rounded-md bg-gradient-to-r font-[poppins] from-[#05445E] to-[#00A7AC] text-white font-semibold text-lg border-none cursor-pointer transition-all hover:opacity-90"
           onClick={handleContinue}
         >
           Continue
         </button>
 
-        <p className="mt-3 text-sm font-semibold cursor-pointer">
+        <p className="mt-3 text-sm font-semibold cursor-pointer text-black">
           Already have an account?{" "}
-          <Link to="/login" className="underline">
+          <Link to="/login" className="underline text-[#00A7AC]">
             Login
           </Link>
         </p>

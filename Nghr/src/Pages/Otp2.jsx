@@ -3,6 +3,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import RightImage from "../assets/images/Vector 60.jpg";
 import BackgroundImage from "../assets/images/Ellipse 34.jpg";
+import "@fontsource/poppins";
+import "@fontsource/inter";
 
 const Otp1 = () => {
   const navigate = useNavigate();
@@ -70,7 +72,7 @@ const Otp1 = () => {
 
   return (
     <div>
-      <h1 className="p-6 text-2xl font-bold text-[#05445E]">NGHR</h1>
+      <h1 className="p-6 text-2xl font-bold text-[#05445E] ">NGHR</h1>
 
       <div
         className="flex items-center min-h-screen justify-between px-16 font-poppins relative"

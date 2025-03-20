@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import img from "../assets/images/frame 6.jpg"; // ✅ Ensure correct path
+import "@fontsource/poppins";
+import "@fontsource/inter";
 
 const Otp = () => {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
@@ -55,7 +57,7 @@ const Otp = () => {
   };
 
   return (
-    <div className="flex h-screen w-screen bg-gray-100">
+    <div className="flex h-screen w-screen bg-gray-100 font-[poppins]">
       {/* Left Side - Image */}
       <div className="hidden md:flex w-1/2 items-center justify-center bg-white">
         <img
@@ -71,8 +73,8 @@ const Otp = () => {
 
       {/* Right Side - OTP Form */}
       <div className="w-full md:w-1/2 flex flex-col justify-center items-center p-6 bg-white">
-        <h2 className="text-2xl font-bold mb-4">Welcome</h2>
-        <p className="text-sm text-gray-600">Login and verify your OTP</p>
+        <h2 className="text-4xl font-bold mb-4">Welcome</h2>
+        <p className="text-sm text-[#7E8B9E]">Login and verify your OTP</p>
 
         {/* OTP Boxes */}
         <form onSubmit={handleSubmit} className="flex flex-col items-center w-full max-w-xs">

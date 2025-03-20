@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { Upload } from "lucide-react"; // Importing upload icon
 import RightImage from "../assets/images/Vector 60.jpg";
 import BackgroundImage from "../assets/images/Ellipse 34.jpg";
+import "@fontsource/poppins";
+import "@fontsource/inter";
 
 const Adhaar = () => {
   const navigate = useNavigate();
@@ -33,7 +35,7 @@ const Adhaar = () => {
 
   return (
     <div>
-      <h1 className="p-3 text-2xl font-bold text-[#05445E]">NGHR</h1>
+      <h1 className="p-3 text-2xl font-bold text-[#05445E] font-[poppins] ">NGHR</h1>
 
       <div
         className="flex items-center min-h-screen justify-between px-15 font-poppins relative"
@@ -47,12 +49,12 @@ const Adhaar = () => {
       >
         {/* Left Side: Form */}
         <div className="w-1/2 p-12 flex flex-col justify-center items-start pl-15 relative z-10">
-          <h1 className="text-2xl text-[#05445E] font-semibold">Step 2 out of 5</h1>
-          <h2 className="text-2xl font-semibold text-[#05445E] mt-2">Secure Your Data with Our Easy KYC Process</h2>
+          <h1 className="text-2xl text-[#05445E] font-semibold font-[poppins] ">Step 2 out of 5</h1>
+          <h2 className="text-2xl font-semibold text-[#05445E] mt-2 font-[poppins] ">Secure Your Data with Our Easy KYC Process</h2>
 
           {/* Aadhaar Card Front Upload */}
           <div className="mt-6">
-            <label className="text-lg font-medium text-[#05445E] mb-2 block">Upload Aadhaar Card Front</label>
+            <label className="text-lg font-medium text-[#05445E] mb-2 block font-[poppins] ">Upload Aadhaar Card Front</label>
             <div className="relative flex items-center border border-gray-300 rounded-md p-5">
               <input
                 type="file"
@@ -67,7 +69,7 @@ const Adhaar = () => {
 
           {/* Aadhaar Card Back Upload */}
           <div className="mt-6">
-            <label className="text-lg font-medium text-[#05445E] mb-2 block">Upload Aadhaar Card Back</label>
+            <label className="text-lg font-medium text-[#05445E] mb-2 block font-[poppins] ">Upload Aadhaar Card Back</label>
             <div className="relative flex items-center border border-gray-300 rounded-md p-5">
               <input
                 type="file"
@@ -83,7 +85,7 @@ const Adhaar = () => {
           {allImagesUploaded && (
             <>
               <div className="mt-4">
-                <label className="text-lg font-medium text-[#05445E] mb-2 block">Aadhar Card number</label>
+                <label className="text-lg font-medium text-[#05445E] mb-2 block font-[poppins] ">Aadhar Card number</label>
                 <input
                   type="text"
                   maxLength="12"
@@ -98,7 +100,7 @@ const Adhaar = () => {
 
           {/* PAN Card Upload */}
           <div className="mt-6">
-            <label className="text-lg font-medium text-[#05445E] mb-4 block">Upload PAN Card</label>
+            <label className="text-lg font-medium text-[#05445E] mb-4 block font-[poppins] ">Upload PAN Card</label>
             <div className="relative flex items-center border border-gray-300 rounded-md p-5 ">
               <input
                 type="file"
@@ -116,7 +118,7 @@ const Adhaar = () => {
             <>
 
               <div className="mt-4">
-                <label className="text-lg font-medium text-[#05445E] mb-2 block">PAN Card number</label>
+                <label className="text-lg font-medium text-[#05445E] mb-2 block font-[poppins]">PAN Card number</label>
                 <input
                   type="text"
                   maxLength="10"
@@ -135,7 +137,7 @@ const Adhaar = () => {
           <button
             onClick={handleVerify}
             disabled={!allImagesUploaded || aadhaarNumber.length !== 12 || panNumber.length !== 10}
-            className={`w-90 mt-6 p-3 rounded text-white font-semibold transition-all ${
+            className={`w-90 mt-6 p-3 rounded text-white font-[poppins] font-semibold transition-all ${
               allImagesUploaded && aadhaarNumber.length === 12 && panNumber.length === 10
                 ? "bg-gradient-to-r from-[#05445E] to-[#00A7AC] hover:opacity-90"
                 : "bg-gray-400 cursor-not-allowed"

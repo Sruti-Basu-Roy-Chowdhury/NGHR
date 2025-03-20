@@ -3,6 +3,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import RightImage from "../assets/images/Vector 60.jpg";
 import BackgroundImage from "../assets/images/Ellipse 34.jpg";
+import "@fontsource/poppins";
+import "@fontsource/inter";
 
 const Otp2 = () => {
   const navigate = useNavigate();
@@ -70,10 +72,10 @@ const Otp2 = () => {
 
   return (
     <div>
-      <h1 className="p-6 text-2xl font-bold text-[#05445E]">NGHR</h1>
+      <h1 className="p-6 text-2xl font-bold text-[#05445E] font-[poppins]">NGHR</h1>
 
       <div
-        className="flex items-center min-h-screen justify-between px-16 font-poppins relative"
+        className="flex items-center min-h-screen justify-between px-16 font-[poppins] relative"
         style={{
           background: `radial-gradient(circle, rgba(123, 255, 222, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), url(${BackgroundImage})`,
           backgroundSize: "50% 100%", // Covers left half
@@ -93,13 +95,13 @@ const Otp2 = () => {
 
         {/* Left Side: OTP Form */}
         <div className="w-1/2 flex flex-col justify-center items-start pl-20 relative z-10">
-          <h1 className="text-2xl text-[#05445E] font-semibold">Step 1 out of 5</h1>
-          <h2 className="text-2xl font-semibold text-[#05445E] mt-2">
+          <h1 className="text-2xl text-[#05445E] font-semibold font-[poppins] ">Step 1 out of 5</h1>
+          <h2 className="text-2xl font-semibold text-[#05445E] mt-2 font-[poppins] ">
             Enter 6-digit NGHR OTP sent to <strong>{phoneNumber}</strong>
           </h2>
 
           {/* OTP Input Fields */}
-          <div className="mt-6">
+          <div className="mt-6 font-[poppins]">
             <label className="text-lg font-medium text-[#05445E] mb-2 block">Enter OTP</label>
             <div className="flex space-x-3">
               {otp.map((digit, index) => (
@@ -118,7 +120,7 @@ const Otp2 = () => {
           </div>
 
           {/* Timer & Resend OTP */}
-          <div className="flex items-center justify-between w-full mt-4">
+          <div className="flex items-center justify-between w-full mt-4 font-[poppins]">
             <span className="text-gray-600 text-lg">
               <span className="text-[#05445E] font-bold">{timer}s</span>
             </span>
@@ -138,7 +140,7 @@ const Otp2 = () => {
           <button
             onClick={handleVerifyOtp}
             disabled={otp.join("").length !== 6}
-            className={`w-90 mt-6 p-3 rounded text-white font-semibold transition-all ${
+            className={`w-90 mt-6 p-3 rounded text-white font-semibold font-[poppins] transition-all ${
               otp.join("").length === 6
                 ? "bg-gradient-to-r from-[#05445E] to-[#00A7AC] hover:opacity-90"
                 : "bg-gray-400 cursor-not-allowed"

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc"; // Google Icon
 import img from "../assets/images/Frame 6.jpg";
+import "@fontsource/poppins";
+import "@fontsource/inter";
 
 const Welcome = () => {
   const [phone, setPhone] = useState("");
@@ -18,8 +20,8 @@ const Welcome = () => {
 
       {/* Right Side - Login Form */}
       <div className="w-full md:w-1/2 flex flex-col justify-center items-center p-6 bg-white">
-        <h2 className="text-2xl font-bold mb-4">Welcome</h2>
-        <p className="text-xs">Login and verify your OTP</p>
+        <h2 className="text-4xl font-bold mb-4 text-[#000000] font-[poppins]">Welcome</h2>
+        <p className="text-sm font-[poppins] text-[#7E8B9E]">Login and verify your OTP</p>
 
         {/* Phone Number Input */}
         <input
@@ -34,7 +36,7 @@ const Welcome = () => {
         {/* Send OTP Button - Disabled until valid phone number is entered */}
         <Link to={isPhoneValid ? "/otp" : "#"}>
           <button
-            className={`w-100 mt-1 p-3 font-semibold rounded-md ${
+            className={`w-100 mt-1 p-3 font-semibold font-[poppins] rounded-md ${
               isPhoneValid
                 ? "bg-[#00A7AC] text-white hover:bg-[#008A8F]"
                 : "bg-gray-300 text-gray-600 cursor-not-allowed"
@@ -52,10 +54,10 @@ const Welcome = () => {
         </button>
 
         {/* Sign Up Text Link (Not a Button) */}
-        <p className="mt-4 text-sm">
+        <p className="mt-4 text-sm font-[poppins]">
           Don't have an account?{" "}
-          <Link to="/signup" className="text-[#00A7AC] font-semibold hover:underline">
-            Sign up here
+          <Link to="/signup" className="text-[#00A7AC] font-[poppins] font-semibold hover:underline">
+            Sign up here!
           </Link>
         </p>
       </div>

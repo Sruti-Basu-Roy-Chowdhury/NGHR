@@ -16,6 +16,11 @@ import Step7 from "./Pages/Step7";
 import Step8 from "./Pages/Step8"; 
 import Step9 from "./Pages/Step9"; 
 import Step10 from "./Pages/Step10"; 
+import Step11 from "./Pages/Step11"; 
+import Step12 from "./Pages/Step12";
+import AddExperience from "./Pages/AddExperience";
+import Step13 from "./Pages/Step13";  
+
 
 function App() {
   return (
@@ -38,6 +43,12 @@ function App() {
         <Route path="/step8" element={<Step8 />} />
         <Route path="/step9" element={<Step9 />} />
         <Route path="/step10" element={<Step10/>} />
+        <Route path="/step11" element={<Step11/>} />
+        <Route path="/step12" element={<Step12/>} />
+        <Route path="/add-experience" element={<AddExperience/>} />
+        <Route path="/step13" element={<Step13/>} />
+
+
 
 
       </Routes>
